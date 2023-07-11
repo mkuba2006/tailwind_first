@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
   content: ["./dist/*.{html,js}"],
   theme: {
     screens: {
@@ -15,6 +18,10 @@ module.exports = {
         'xl-item': '300px',
         'xl-img-container': '170px',
         'xl-text': '210px',
+        'xl-div': '90%',
+      },
+      maxWidth: {
+        'custom': '1200px',
       },
       height: {
         'na100': '100%',
@@ -23,7 +30,13 @@ module.exports = {
       },
       padding:{
         'xl-img-container': '5px',
-      }
+      },
+      theme: {
+        fontFamily: {
+          sans: ['Graphik', 'sans-serif'],
+          serif: ['Merriweather', 'serif'],
+        },
+      },
     },
   },
   plugins: [],
